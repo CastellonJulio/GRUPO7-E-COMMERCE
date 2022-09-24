@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="https://blog.ida.cl/wp-content/uploads/sites/5/2019/06/PoliticasDatos-655x470.png" class="img-fluid" alt="Responsive image" ></div>
+        <div class="col-lg-7">
+          <div class="p-5">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4">Políticas de privacidad y condiciones de uso</h1>
+            </div>
+          
+             <P class="text-wrap">
+                El Manual de Políticas de Seguridad y Privacidad de la Información del Ministerio de Comercio, Industria y Turismo – MinCIT reúne las políticas y directrices institucionales, y los estándares de seguridad de información y protección de datos personales, que son el marco para la implementación de los procedimientos y controles de seguridad y privacidad de información.
+             </P>
+        
+            <hr>
+         
+            <div class="text-center">
+              <a class="small" href="{{url_for('registro')}}">Registrarme</a>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

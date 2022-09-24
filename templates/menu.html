@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Libreria Inditex</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Login</a>
+                  <a class="dropdown-item" href="#">Registro</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Categorias</a>
+                </div>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lista de Desos</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genaralidades</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Contactanos</a>
+              <a class="dropdown-item" href="#">Sobre Nosotros</a>
+              <a class="dropdown-item" href="#">Privacidad</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Terminos</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="offcanvas offcanvas-start fondo-oscuro" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasExampleLabel">
+            <i class="bi bi-robot"></i>
+            Proyecto Mision TIC
+        </h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <hr>
+        <div class="usuario">
+            <img src="https://picsum.photos/id/1005/367/267" alt="">
+            Nombre de usuario
+        </div>
+        <hr>
+
+        <div class="d-grid gap-2">
+            <a href="#" class="boton seleccionado"><i class="bi bi-house"></i>Administrador</a>
+            <a onclick="verdatos();" href="{{url_for('menu_user')}}" class="boton"><i class="bi bi-person"></i>Gestion
+                Usuarios</a>
+            <a onclick="verdatos();" href="{{url_for('menu_productos')}}" class="boton"><i class="bi bi-person"></i>Gestion
+                    de Productos</a>    
+            <!-- <a href="profesores.html" class="boton"><i class="bi bi-person-workspace"></i>Profesores</a>
+            <a href="estudiantes.html" class="boton"><i class="bi bi-person-check"></i>Estudiantes</a>
+            <a href="materias.html" class="boton"><i class="bi bi-list-task"></i>Materias</a>
+            <a href="cursos.html" class="boton"><i class="bi bi-list-task"></i>Curso</a> -->
+        </div>
+        <div class="d-grid gap-2">
+            <a href="#" class="boton seleccionado"><i class="bi bi-person-check"></i>Cliente</a>
+            <a href="{{url_for('menu_carrito')}}" class="boton"><i class="bi bi-cart-plus-fill"></i>Ver Productos</a>
+            <a href="{{url_for('menu_deseos')}}" class="boton"><i class="bbi bi-bag-check"></i>Lista de Deseos</a>
+            <!-- <a href="profesores.html" class="boton"><i class="bi bi-person-workspace"></i>Profesores</a>
+            <a href="estudiantes.html" class="boton"><i class="bi bi-person-check"></i>Estudiantes</a>
+            <a href="materias.html" class="boton"><i class="bi bi-list-task"></i>Materias</a>
+            <a href="cursos.html" class="boton"><i class="bi bi-list-task"></i>Curso</a> -->
+        </div>
+
+        <div class="d-grid gap-2">
+            <a href="{{url_for('login')}}" class="boton seleccionado"><i class="bi bi-box-arrow-left"></i>Salir</a>
+            
+        </div>
+
+      <!--
+        <div class="d-grid gap-2">
+            <a href="#" class="boton seleccionado"><i class="bi bi-list"></i>Estudiante</a>
+            <a href="#" class="boton"><i class="bi bi-person"></i>Consulta</a>
+            <!-- <a href="profesores.html" class="boton"><i class="bi bi-person-workspace"></i>Profesores</a>
+            <a href="estudiantes.html" class="boton"><i class="bi bi-person-check"></i>Estudiantes</a>
+            <a href="materias.html" class="boton"><i class="bi bi-list-task"></i>Materias</a>
+            <a href="cursos.html" class="boton"><i class="bi bi-list-task"></i>Curso</a> 
+        </div>
+    -->  
+<!--este es otra modificacion-->
+
+    </div>
+</div>
+
+
+{% block content1 %}
+
+{% endblock %}
+
+{% endblock %}
